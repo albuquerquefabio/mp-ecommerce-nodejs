@@ -12,12 +12,12 @@ exports.default = async (app) => {
     app.get('/', function (req, res) {
       res.render('home');
     });
-    // app.get('/*', function (req, res) {
-    //   res.render('home');
-    // });
 
     app.get('/detail', function (req, res) {
       res.render('detail', req.query);
+    });
+    app.get('/checkout', function (req, res) {
+      res.render('checkout', req.query);
     });
   } catch (error) {
     console.log('Error Express Client ---\n', `${error}`);

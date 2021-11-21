@@ -15,27 +15,28 @@ exports.route = async (app) => {
         {
           id: '1234',
           title: title,
+          description: 'Celular de Tienda e-commerce',
           picture_url: image,
           unit_price: +price,
           quantity: +unit,
         },
       ],
       payer: {
-        name: 'João',
-        surname: 'Silva',
+        name: 'Lalo',
+        surname: 'Landa',
         email: '97bde90d-a43c-4c95-9e6b-a6959ada7dcf@email.webhook.site',
         phone: {
-          area_code: '11',
-          number: 44444444,
+          area_code: '55',
+          number: Number('98529-8743'),
         },
-        // identification: {
-        //   type: 'CPF',
-        //   number: '19119119100',
-        // },
+        identification: {
+          type: 'CPF',
+          number: '19119119100',
+        },
         address: {
-          street_name: 'Street',
-          street_number: 123,
-          zip_code: '06233200',
+          street_name: 'Insurgentes Sur',
+          street_number: 1602,
+          zip_code: '78134-190',
         },
       },
       back_urls: {
@@ -55,7 +56,7 @@ exports.route = async (app) => {
       notification_url:
         'https://webhook.site/97bde90d-a43c-4c95-9e6b-a6959ada7dcf',
       statement_descriptor: 'Tienda e-commerce',
-      external_reference: 'Reference_1234',
+      external_reference: 'fabiosk881@gmail.com',
       expires: false,
     };
 

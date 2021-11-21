@@ -43,100 +43,52 @@
           >
             <div class='as-accessories-filter-tile column large-6 small-3'>
 
-              <button
-                class='as-filter-button'
-                aria-expanded='true'
-                aria-controls='as-search-filters'
-                type='button'
-              >
-                <h2 class='as-filter-button-text'>
-                  Smartphones
-                </h2>
-              </button>
+              <h2 class='as-filter-button-text'>
+                <button type='button' class='as-filter-button'>Smartphones
+                </button>
+                / Carrinho
+              </h2>
 
             </div>
 
           </div>
         </div>
         <div class='as-accessories-results as-search-desktop'>
-          <div class='width:60%'>
-            <div
-              class='as-producttile-tilehero with-paddlenav'
-              style='float:left;'
-            >
-              <div class='as-dummy-container as-dummy-img'>
 
-                <img
-                  src='./assets/wireless-headphones'
-                  class='ir ir item-image as-producttile-image'
-                  style='max-width: 70%;max-height: 70%;'
-                  alt=''
-                  width='445'
-                  height='445'
-                />
-              </div>
-              <div class='images mini-gallery gal5'>
+        </div>
 
-                <div class='as-isdesktop with-paddlenav with-paddlenav-onhover'>
-                  <div
-                    class='clearfix image-list xs-no-js as-util-relatedlink relatedlink'
-                    data-relatedlink='6|Powerbeats3 Wireless Earphones - Neighborhood Collection - Brick Red|MPXP2'
-                  >
-                    <div class='as-tilegallery-element as-image-selected'>
-                      <div class=''></div>
-                      <img
-                        id='item-image'
-                        src='{{img}}'
-                        class='ir ir item-image as-producttile-image'
-                        alt='{{title}}'
-                        width='445'
-                        height='445'
-                        style='content:-webkit-image-set(url({{img}}) 2x);'
-                      />
-                    </div>
-
-                  </div>
-
-                </div>
-
-              </div>
-
+        <div class='product-cart flex-row'>
+          <div class='product-image flex-column'><img
+              src='{{img}}'
+              alt='{{title}}'
+              class='item-image'
+              id='item-image'
+            /></div>
+          <div class='product-info flex-column'>
+            <div class='product-title'>
+              <h3 id='item-title'>{{title}}</h3>
             </div>
-            <div
-              class='as-producttile-info'
-              style='float:left;min-height: 168px;'
-            >
-              <div
-                class='as-producttile-titlepricewraper'
-                style='min-height: 128px;'
-              >
-                <div class='as-producttile-title'>
-                  <h3 class='as-producttile-name'>
-                    <p class='as-producttile-tilelink'>
-                      <span data-ase-truncate='2' id='item-title'>
-                        {{title}}
-                      </span>
-                    </p>
-
-                  </h3>
-                </div>
-                <h3 id='item-price'>
-                  {{price}}
-                </h3>
-                <h3 id='item-unit'>
-                  {{unit}}
-                </h3>
-              </div>
-              <button
-                type='submit'
-                id='checkout'
-                class='mercadopago-button'
-                formmethod='post'
-              >Pagar</button>
+            <div class='product-description'>
+              <p>Celular de Tienda e-commerce</p>
             </div>
+            <div class='product-price'>
+              <h3 id='item-price'>{{price}}</h3>
+            </div>
+            <div class='product-unit'>
+              <p>
+                Item:
+                <strong id='item-unit'>{{unit}}</strong>
+              </p>
+            </div>
+          </div>
+          <div class='cart-action'>
+            <button type='submit' id='checkout'>Fechar pedido</button>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
+<footer>
+  Esse é um exemplo de integração do Checkout Pro do Mercado Pago
+</footer>
