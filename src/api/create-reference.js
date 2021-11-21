@@ -3,8 +3,8 @@ const mercadopago = require('mercadopago');
 // REPLACE WITH YOUR ACCESS TOKEN AVAILABLE IN: https://developers.mercadopago.com/panel
 mercadopago.configure({
   access_token:
-    'TEST-5125011723873109-061202-994eb5ad480aed2de6c316735318f23a-170122687',
-  // integrator_id: '',
+    'APP_USR-334491433003961-030821-12d7475807d694b645722c1946d5ce5a-725736327', //Test User
+  integrator_id: 'dev_24c65fb163bf11ea96500242ac130004', // Test User
 });
 
 exports.route = async (app) => {
@@ -32,7 +32,7 @@ exports.route = async (app) => {
       payer: {
         name: 'Lalo',
         surname: 'Landa',
-        email: '97bde90d-a43c-4c95-9e6b-a6959ada7dcf@email.webhook.site',
+        email: 'test_user_92801501@testuser.com',
         phone: {
           area_code: '55',
           number: Number('98529-8743'),
@@ -66,7 +66,6 @@ exports.route = async (app) => {
       statement_descriptor: 'Tienda e-commerce',
       external_reference: 'fabiosk881@gmail.com',
       expires: false,
-      date_created: dateFrom.replace('Z', '-04:00'),
       date_of_expiration: dateTo.replace('Z', '-04:00'),
       // expiration_date_from: dateFrom.replace('Z', '-04:00'),
       // expiration_date_to: dateTo.replace('Z', '-04:00'),
