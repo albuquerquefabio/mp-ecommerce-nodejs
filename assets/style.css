@@ -180,7 +180,7 @@ p {
 
 /* .checkout-title, */
 .checkout-box {
-  max-width: 34rem;
+  max-width: 36rem;
 }
 .checkout-title h2,
 .checkout-title h3 {
@@ -223,6 +223,22 @@ p {
 .checkout-payment button {
   width: 80%;
   margin: auto;
+}
+
+.approved-animation {
+  animation: approvedAnimation 1s cubic-bezier(0.12, 0, 0.39, 0) 4s 1 normal
+    forwards;
+}
+@keyframes approvedAnimation {
+  0% {
+    opacity: 0;
+    transform: translate(50px, 50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
 }
 footer {
   margin-top: 2rem;
