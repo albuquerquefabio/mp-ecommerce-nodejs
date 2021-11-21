@@ -4,21 +4,29 @@ const mercadopago = require('mercadopago');
 mercadopago.configure({
   access_token:
     'TEST-5125011723873109-061202-994eb5ad480aed2de6c316735318f23a-170122687',
+  // integrator_id: '',
 });
 
 exports.route = async (app) => {
   app.post('/api/create-reference', async (req, res) => {
     const { image, title, price, unit, origin } = req.body;
 
+    const dateFrom = new Date().toISOString();
+    new Date().setHours(new Date().getHours() - 4);
+    const dateTo = new Date(
+      new Date().setDate(new Date().getDate() + 3)
+    ).toISOString();
     let preference = {
       items: [
         {
           id: '1234',
           title: title,
           description: 'Celular de Tienda e-commerce',
+          category_id: 'smartphone',
           picture_url: image,
           unit_price: +price,
           quantity: +unit,
+          currency_id: 'BRL',
         },
       ],
       payer: {
@@ -44,7 +52,7 @@ exports.route = async (app) => {
         failure: `${origin}/feedback-failure`,
         pending: `${origin}/feedback-pending`,
       },
-      auto_return: 'all',
+      auto_return: 'approved',
       payment_methods: {
         excluded_payment_methods: [
           {
@@ -58,6 +66,10 @@ exports.route = async (app) => {
       statement_descriptor: 'Tienda e-commerce',
       external_reference: 'fabiosk881@gmail.com',
       expires: false,
+      date_created: dateFrom.replace('Z', '-04:00'),
+      date_of_expiration: dateTo.replace('Z', '-04:00'),
+      // expiration_date_from: dateFrom.replace('Z', '-04:00'),
+      // expiration_date_to: dateTo.replace('Z', '-04:00'),
     };
 
     try {
