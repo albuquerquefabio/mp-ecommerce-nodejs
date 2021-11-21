@@ -84,14 +84,15 @@ document.addEventListener('DOMContentLoaded', () => {
   // CHECKOUT
 
   const goBackBtn = document.getElementById('go-back-btn');
-  goBackBtn.addEventListener(
-    'click',
-    () => {
-      const lastCart = localStorage.getItem('last-cart');
-      window.location.href = `${origin}/detail${lastCart}`;
-    },
-    false
-  );
+  if (!!goBackBtn)
+    goBackBtn.addEventListener(
+      'click',
+      () => {
+        const lastCart = localStorage.getItem('last-cart');
+        window.location.href = `${origin}/detail${lastCart}`;
+      },
+      false
+    );
 
   const checkoutId = document.getElementById('checkout-id');
   if (!!checkoutId) {
