@@ -182,7 +182,8 @@ p {
 .checkout-box {
   max-width: 34rem;
 }
-.checkout-title h2 {
+.checkout-title h2,
+.checkout-title h3 {
   width: 100%;
   text-align: center;
 }
@@ -202,6 +203,18 @@ p {
 }
 .checkout-value {
   flex: 0;
+}
+.checkout-row img {
+  object-fit: cover;
+  object-position: top;
+  width: 15rem;
+  height: 15rem;
+
+  padding: 1rem;
+}
+.checkout-row img.pending {
+  width: 20rem;
+  object-position: center;
 }
 
 .checkout-payment {

@@ -7,4 +7,10 @@ exports.route = async (app) => {
       MerchantOrder: req.query.merchant_order_id,
     });
   });
+  app.get('/feedback-success', (req, res) => {
+    console.dir(req.query);
+    res.render('success', req.query);
+  });
+  app.get('/feedback-failure', (req, res) => res.render('failure', req.query));
+  app.get('/feedback-pending', (req, res) => res.render('pending', req.query));
 };

@@ -29,10 +29,10 @@ exports.route = async (app) => {
           area_code: '55',
           number: Number('98529-8743'),
         },
-        identification: {
-          type: 'CPF',
-          number: '19119119100',
-        },
+        // identification: {
+        //   type: 'CPF',
+        //   number: '19119119100',
+        // },
         address: {
           street_name: 'Insurgentes Sur',
           street_number: 1602,
@@ -40,9 +40,9 @@ exports.route = async (app) => {
         },
       },
       back_urls: {
-        success: 'http://localhost:8080/feedback',
-        failure: 'http://localhost:8080/feedback',
-        pending: 'http://localhost:8080/feedback',
+        success: `${origin}/feedback-success`,
+        failure: `${origin}/feedback-failure`,
+        pending: `${origin}/feedback-pending`,
       },
       auto_return: 'all',
       payment_methods: {
